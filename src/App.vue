@@ -8,6 +8,8 @@ import mainPage from "./components/mainPage.vue";
 
 <style>
 body {
-  box-sizing: border-box;
+  margin: 0;
+  height: 100%;
+  list-style: none;
 }
 </style>
