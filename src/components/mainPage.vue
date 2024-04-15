@@ -66,12 +66,18 @@
         </button>
       </div>
       <!-- 標題圖片說明文字文字 -->
-      <div class="mx-auto max-w-2xl text-center mt-16">
+      <div class="mx-auto max-w-2xl text-center my-16">
         <div
           class="mt-2 text-2xl font-medium text-white sm:text-2xl"
           data-aos="fade-up"
         >
           🔥🔥台灣在地純手工鋁製前打輪🔥🔥
+        </div>
+        <div
+          class="mt-2 text-xl font-medium text-white sm:text-xl"
+          data-aos="fade-up"
+        >
+          文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹
         </div>
       </div>
 
