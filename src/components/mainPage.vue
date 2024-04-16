@@ -1,7 +1,7 @@
 <template>
   <div class="background flex max-w-screen">
     <section
-      class="title mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center"
+      class="title mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col items-center"
     >
       <!-- 標題文字 -->
       <div class="mx-auto max-w-2xl text-center mt-16">
@@ -80,21 +80,56 @@
           文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹
         </div>
       </div>
-
       <!-- 詳細圖 -->
-      <div class="detail__photo text-white mt-16">
-        <div class="flex justify-between">
-          <img
-            style="transform: translateX(0vw)"
-            src="@/assets/輪子/灰色/灰色_把手01.jpg"
-            alt=""
-            class="w-auto h-auto"
+      <div class="detail__photo text-white mt-16 w-full my-16">
+        <div class="flex justify-between relative">
+          <el-image
+            class="w-full h-96"
+            :src="grayList01[0]"
+            :preview-src-list="grayList01"
+            :initial-index="0"
+            lazy
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
           />
-          <img
-            style="transform: translateX(0vw)"
-            src="@/assets/輪子/灰色/灰色_底座01.jpg"
-            alt=""
-            class="w-auto h-auto"
+          <span
+            class="absolute top-0 text-black inline-block text-xl font-semibold rounded-md whitespace-nowrap"
+            ><div class="">把手</div></span
+          >
+          <el-image
+            class="w-full h-96"
+            :src="grayList01[1]"
+            :preview-src-list="grayList01"
+            :initial-index="1"
+            lazy
+            data-aos="zoom-in-left"
+            data-aos-duration="1500"
+          />
+          <div class="flex items-center z-10">
+            <span
+              class="absolute text-black inline-block px-4 py-1 text-xl font-semibold rounded-md whitespace-nowrap"
+              ><div class="">把手</div></span
+            >
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <el-image
+            class="w-full h-96"
+            :src="grayList01[2]"
+            :preview-src-list="grayList01"
+            :initial-index="2"
+            lazy
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+          />
+          <el-image
+            class="w-full h-96"
+            :src="grayList01[3]"
+            :preview-src-list="grayList01"
+            :initial-index="3"
+            lazy
+            data-aos="zoom-in-left"
+            data-aos-duration="1500"
           />
         </div>
       </div>
@@ -109,6 +144,14 @@ import "aos/dist/aos.css";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);
+
+// 灰色物輪物品照片
+const grayList01 = [
+  require("@/assets/輪子/灰色/灰色_把手01.jpg"),
+  require("@/assets/輪子/灰色/灰色_底座01.jpg"),
+  require("@/assets/輪子/灰色/灰色_側面01.jpg"),
+  require("@/assets/輪子/灰色/灰色_底座02.jpg"),
+];
 
 onMounted(() => {
   topPhoto();
@@ -129,7 +172,7 @@ const topPhoto = () => {
           // 第二個動畫結束後執行
           gsap.to(".title__photo", {
             x: "0rem",
-            duration: 0.1,
+            duration: 0.2,
           });
         },
       });
