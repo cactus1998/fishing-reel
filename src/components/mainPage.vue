@@ -4,7 +4,7 @@
       class="title mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col items-center"
     >
       <!-- 標題文字 -->
-      <div class="mx-auto max-w-2xl text-center mt-16">
+      <div class="mx-auto max-w-2xl text-center mt-10">
         <div class="mt-2 text-lg font-medium text-white sm:text-lg">
           Leka big wheel
         </div>
@@ -16,7 +16,7 @@
       </div>
       <!-- 標題圖片 -->
       <div
-        class="title__photo text-white mt-36"
+        class="title__photo text-white mt-32"
         style="transform: translateX(-100vw)"
       >
         <img
@@ -26,6 +26,7 @@
         />
         <button
           class="absolute top-0 right-16"
+          @click="scrollToDetail"
           @mouseover="showText_handle = true"
           @mouseleave="showText_handle = false"
         >
@@ -46,6 +47,7 @@
         </button>
         <button
           class="absolute top-64 right-0"
+          @click="scrollToDetail"
           @mouseover="showText_Base = true"
           @mouseleave="showText_Base = false"
         >
@@ -64,27 +66,42 @@
             class="w-16 h-16"
           />
         </button>
+        <button
+          class="absolute top-40 left-0"
+          @click="scrollToDetail"
+          @mouseover="showText_skeleton = true"
+          @mouseleave="showText_skeleton = false"
+        >
+          <div class="flex items-center">
+            <span
+              v-if="showText_skeleton"
+              class="absolute bottom-16 text-white inline-block bg-gray-600 px-4 py-1 text-base font-semibold rounded-md whitespace-nowrap"
+              ><div class="">鋁框</div></span
+            >
+          </div>
+
+          <img
+            style="transform: translateX(0vw)"
+            src="@/assets/超連結燈.gif"
+            alt=""
+            class="w-16 h-16"
+          />
+        </button>
       </div>
       <!-- 標題圖片說明文字文字 -->
-      <div class="mx-auto max-w-2xl text-center my-16">
-        <div
-          class="mt-2 text-2xl font-medium text-white sm:text-2xl"
-          data-aos="fade-up"
-        >
+      <div class="mx-auto max-w-2xl text-center mt-16 mb-40">
+        <div class="my-6 text-2xl font-medium text-white sm:text-2xl">
           🔥🔥台灣在地純手工鋁製前打輪🔥🔥
         </div>
-        <div
-          class="mt-2 text-xl font-medium text-white sm:text-xl"
-          data-aos="fade-up"
-        >
-          文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹
+        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+          對於釣魚愛好者而言，每一次的垂釣都是一場挑戰，一次尋找極致的體驗。現在，讓我們為您帶來一種獨一無二的感受。個性化釣魚捲線器不僅能夠提供卓越的性能，更能夠與您的個人風格完美融合。
         </div>
       </div>
       <!-- 詳細圖 -->
-      <div class="detail__photo text-white mt-16 w-full my-16">
+      <div class="detail__photo text-white mt-16 w-full">
         <div class="flex justify-between relative">
           <el-image
-            class="w-full h-96"
+            class="w-full h-96 px-4 py-4 object-contain"
             :src="grayList01[0]"
             :preview-src-list="grayList01"
             :initial-index="0"
@@ -92,12 +109,8 @@
             data-aos="zoom-in-right"
             data-aos-duration="1500"
           />
-          <span
-            class="absolute top-0 text-black inline-block text-xl font-semibold rounded-md whitespace-nowrap"
-            ><div class="">把手</div></span
-          >
           <el-image
-            class="w-full h-96"
+            class="w-full h-96 px-4 py-4"
             :src="grayList01[1]"
             :preview-src-list="grayList01"
             :initial-index="1"
@@ -105,16 +118,10 @@
             data-aos="zoom-in-left"
             data-aos-duration="1500"
           />
-          <div class="flex items-center z-10">
-            <span
-              class="absolute text-black inline-block px-4 py-1 text-xl font-semibold rounded-md whitespace-nowrap"
-              ><div class="">把手</div></span
-            >
-          </div>
         </div>
         <div class="flex justify-between">
           <el-image
-            class="w-full h-96"
+            class="w-full h-96 px-4 py-4"
             :src="grayList01[2]"
             :preview-src-list="grayList01"
             :initial-index="2"
@@ -123,7 +130,7 @@
             data-aos-duration="1500"
           />
           <el-image
-            class="w-full h-96"
+            class="w-full h-96 px-4 py-4 object-contain"
             :src="grayList01[3]"
             :preview-src-list="grayList01"
             :initial-index="3"
@@ -131,6 +138,15 @@
             data-aos="zoom-in-left"
             data-aos-duration="1500"
           />
+        </div>
+      </div>
+      <!-- 詳細圖說明文字文字 -->
+      <div class="mx-auto max-w-2xl text-center mb-40">
+        <div class="my-6 text-2xl font-medium text-white sm:text-2xl">
+          🔥🔥前打輪細節圖片(可點擊放大)🔥🔥
+        </div>
+        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+          我們的釣魚捲線器採用精湛的手工鋁製前打輪，每一個細節都經過精心雕琢，確保您在垂釣過程中擁有頂級的操作感受。無論是釣魚的過程還是成果，我們都致力於讓您的每一次釣魚體驗都達到最高水準。
         </div>
       </div>
     </section>
@@ -144,6 +160,7 @@ import "aos/dist/aos.css";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);
+const showText_skeleton = ref(false);
 
 // 灰色物輪物品照片
 const grayList01 = [
@@ -152,6 +169,13 @@ const grayList01 = [
   require("@/assets/輪子/灰色/灰色_側面01.jpg"),
   require("@/assets/輪子/灰色/灰色_底座02.jpg"),
 ];
+
+const scrollToDetail = () => {
+  const element = document.querySelector(".flex.justify-between.relative");
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 onMounted(() => {
   topPhoto();
