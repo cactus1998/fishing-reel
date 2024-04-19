@@ -94,7 +94,10 @@
           🔥🔥台灣在地純手工鋁製前打輪🔥🔥
         </div>
         <div class="my-2 text-xl font-medium text-white sm:text-xl">
-          對於釣魚愛好者而言，每一次的垂釣都是一場挑戰，一次尋找極致的體驗。現在，讓我們為您帶來一種獨一無二的感受。個性化釣魚捲線器不僅能夠提供卓越的性能，更能夠與您的個人風格完美融合。
+          對於釣魚愛好者而言，每一次的垂釣都是一場挑戰，一次尋找極致的體驗
+        </div>
+        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+          個性化釣魚捲線器不僅能夠提供卓越的性能，更能夠與您的個人風格完美融合，為您帶來一種獨一無二的體驗
         </div>
       </div>
       <!-- 詳細圖 -->
@@ -140,13 +143,26 @@
           />
         </div>
       </div>
-      <!-- 詳細圖說明文字文字 -->
+      <!-- 詳細圖說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-40">
         <div class="my-6 text-2xl font-medium text-white sm:text-2xl">
           🔥🔥前打輪細節圖片(可點擊放大)🔥🔥
         </div>
         <div class="my-2 text-xl font-medium text-white sm:text-xl">
           我們的釣魚捲線器採用精湛的手工鋁製前打輪，每一個細節都經過精心雕琢，確保您在垂釣過程中擁有頂級的操作感受。無論是釣魚的過程還是成果，我們都致力於讓您的每一次釣魚體驗都達到最高水準。
+        </div>
+      </div>
+      <!-- 立方體展示照片 -->
+      <div class="max-w-2xl">
+        <swiperPages :photoList="swiperPhoto"></swiperPages>
+      </div>
+      <!-- 立方體展示說明文字 -->
+      <div class="mx-auto max-w-2xl text-center mb-40">
+        <div class="my-6 text-2xl font-medium text-white sm:text-2xl">
+          🔥🔥顏色展示🔥🔥
+        </div>
+        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+          特殊色皆為訂製色，顧名思義是客製化的顏色，亦不能退換貨🚫
         </div>
       </div>
     </section>
@@ -156,7 +172,7 @@
 import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import AOS from "aos";
-import "aos/dist/aos.css";
+import swiperPages from "@/components/swiper/colorSwiper.vue";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);
@@ -168,6 +184,14 @@ const grayList01 = [
   require("@/assets/輪子/灰色/灰色_底座01.jpg"),
   require("@/assets/輪子/灰色/灰色_側面01.jpg"),
   require("@/assets/輪子/灰色/灰色_底座02.jpg"),
+];
+
+const swiperPhoto = [
+  require("@/assets/輪子/方塊輪播/三色.jpg"),
+  require("@/assets/輪子/方塊輪播/灰色.jpg"),
+  require("@/assets/輪子/方塊輪播/紅色.jpg"),
+  require("@/assets/輪子/方塊輪播/藍色.jpg"),
+  require("@/assets/輪子/方塊輪播/金色.jpg"),
 ];
 
 const scrollToDetail = () => {
@@ -223,5 +247,22 @@ const topPhoto = () => {
     #1f1f1f,
     #131313
   );
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
 </style>
