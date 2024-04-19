@@ -1,13 +1,20 @@
 <template>
   <div>
     <swiper
-      :effect="'cards'"
+      :effect="'cube'"
       :grabCursor="true"
       :loop="true"
       :autoplay="{ delay: 4500, disableOnInteraction: false }"
+      :cubeEffect="{
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      }"
+      :pagination="true"
     >
-      <swiper-slide v-for="(item, index) in props.colorList" :key="index">
-        <div class="w-10 h-10" :style="{ backgroundColor: item.color }"></div>
+      <swiper-slide v-for="(image, index) in props.photoList" :key="index">
+        <img :src="image" class="swiper-image" />
       </swiper-slide>
     </swiper>
   </div>
@@ -17,12 +24,12 @@
 import defineProps from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue"; // swiper 所需组件
 import "swiper/swiper-bundle.css";
-import SwiperCore, { EffectCube, EffectFade, Autoplay } from "swiper";
+import SwiperCore, { EffectCube, Pagination, Autoplay } from "swiper";
 
-SwiperCore.use([EffectCube, EffectFade, Autoplay]);
+SwiperCore.use([EffectCube, Pagination, Autoplay]);
 
 const props = defineProps({
-  colorList: Array,
+  photoList: Array,
 });
 </script>
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div class="background flex max-w-screen">
+  <div class="background max-w-screen">
     <section
       class="title mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col items-center"
     >
@@ -11,6 +11,13 @@
         <div
           class="mt-2 text-7xl font-black tracking-tight text-white sm:text-7xl"
         >
+          <span class="inline-block align-top">
+            <img
+              src="@/assets/logo.png"
+              alt=""
+              class="h-20 w-20 inline-block mr-2 align-top"
+            />
+          </span>
           樂咖大物輪
         </div>
       </div>
@@ -154,7 +161,7 @@
       </div>
       <!-- 立方體展示照片 -->
       <div class="max-w-2xl">
-        <swiperPages :photoList="swiperPhoto"></swiperPages>
+        <cubeSwiperPages :photoList="cubeSwiperPhoto"></cubeSwiperPages>
       </div>
       <!-- 立方體展示說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-40">
@@ -165,6 +172,13 @@
           特殊色皆為訂製色，顧名思義是客製化的顏色，亦不能退換貨🚫
         </div>
       </div>
+      <!--顏色展示 -->
+      <div class="max-w-2xl">
+        <colorSwiperPages :colorList="colorSwiper"></colorSwiperPages>
+      </div>
+      <div class="max-w-2xl my-20">
+        <testColor></testColor>
+      </div>
     </section>
   </div>
 </template>
@@ -172,7 +186,10 @@
 import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import AOS from "aos";
-import swiperPages from "@/components/swiper/colorSwiper.vue";
+import "aos/dist/aos.css";
+import cubeSwiperPages from "@/components/swiper/cubeSwiper.vue";
+import colorSwiperPages from "@/components/swiper/colorSwiper.vue";
+import testColor from "@/components/swiper/testColor.vue";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);
@@ -186,12 +203,36 @@ const grayList01 = [
   require("@/assets/輪子/灰色/灰色_底座02.jpg"),
 ];
 
-const swiperPhoto = [
+const cubeSwiperPhoto = [
   require("@/assets/輪子/方塊輪播/三色.jpg"),
   require("@/assets/輪子/方塊輪播/灰色.jpg"),
   require("@/assets/輪子/方塊輪播/紅色.jpg"),
   require("@/assets/輪子/方塊輪播/藍色.jpg"),
   require("@/assets/輪子/方塊輪播/金色.jpg"),
+];
+
+const colorSwiper = [
+  { color: "rgba(0, 0, 0)", colorName: "黑色" },
+  { color: "rgba(139, 58, 58)", colorName: "棗紅色" },
+  { color: "rgba(0, 0, 128)", colorName: "寶藍色" },
+  { color: "rgba(255, 192, 203)", colorName: "淺紅色" },
+  { color: "rgba(255, 201, 153)", colorName: "桃紅色" },
+  { color: "rgba(128, 0, 128)", colorName: "紫色" },
+  { color: "rgba(0, 128, 0)", colorName: "墨綠色" },
+  { color: "rgba(0, 255, 0)", colorName: "綠色" },
+  { color: "rgba(128, 255, 128)", colorName: "淺綠色" },
+  { color: "rgba(255, 165, 0)", colorName: "桔色" },
+  { color: "rgba(255, 255, 0)", colorName: "金黃色" },
+  { color: "rgba(230, 190, 0)", colorName: "K金色" },
+  { color: "rgba(192, 64, 0)", colorName: "青銅色" },
+  { color: "rgba(64, 64, 64)", colorName: "咖啡色" },
+  { color: "rgba(139, 99, 33)", colorName: "深鈦色" },
+  { color: "rgba(0, 0, 128)", colorName: "海軍色" },
+  { color: "rgba(0, 128, 255)", colorName: "水藍色" },
+  { color: "rgba(75, 0, 130)", colorName: "靛紫色" },
+  { color: "rgba(168, 168, 168)", colorName: "鈦色" },
+  { color: "rgba(128, 128, 128)", colorName: "鈦灰色" },
+  { color: "rgba(192, 192, 192)", colorName: "灰色" },
 ];
 
 const scrollToDetail = () => {
