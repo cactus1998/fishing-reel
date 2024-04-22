@@ -176,13 +176,16 @@
         </div>
       </div>
       <!--顏色展示 -->
-      <div class="w-full">
+      <div class="w-full mb-40">
         <colorSwiperPages
           :specialColor="specialColor"
           :basicColor="basicColor"
         ></colorSwiperPages>
       </div>
       <!-- 價目及尺寸表 -->
+      <div class="w-full mb-40">
+        <priceList></priceList>
+      </div>
       <!-- banner -->
     </section>
   </div>
@@ -192,8 +195,9 @@ import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import cubeSwiperPages from "@/components/swiper/cubeSwiper.vue";
-import colorSwiperPages from "@/components/swiper/colorChunk.vue";
+import cubeSwiperPages from "@/components/colorBlock/cubeSwiper.vue";
+import colorSwiperPages from "@/components/colorBlock/colorChunk.vue";
+import priceList from "@/components/table/priceList.vue";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);

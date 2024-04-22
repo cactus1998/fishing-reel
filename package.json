@@ -15,7 +15,8 @@
     "pinia": "^2.1.7",
     "swiper": "^6.8.4",
     "vue": "^3.2.13",
-    "vue-awesome-swiper": "^5.0.1"
+    "vue-awesome-swiper": "^5.0.1",
+    "vue3-table-lite": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
