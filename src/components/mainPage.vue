@@ -97,7 +97,7 @@
       </div>
       <!-- 標題圖片說明文字文字 -->
       <div class="mx-auto max-w-2xl text-center mt-16 mb-40">
-        <div class="my-6 text-2xl font-medium text-white sm:text-2xl">
+        <div class="my-6 text-2xl font-medium text-white sm:text-4xl">
           🔥🔥台灣在地純手工鋁製前打輪🔥🔥
         </div>
         <div class="my-2 text-xl font-medium text-white sm:text-xl">
@@ -164,21 +164,26 @@
         <cubeSwiperPages :photoList="cubeSwiperPhoto"></cubeSwiperPages>
       </div>
       <!-- 立方體展示說明文字 -->
-      <div class="mx-auto max-w-2xl text-center mb-40">
+      <div class="mx-auto max-w-2xl text-center mb-4">
         <div class="my-6 text-2xl font-medium text-white sm:text-2xl">
           🔥🔥顏色展示🔥🔥
         </div>
         <div class="my-2 text-xl font-medium text-white sm:text-xl">
           特殊色皆為訂製色，顧名思義是客製化的顏色，亦不能退換貨🚫
         </div>
+        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+          且因訂製關係，製作等待時間較長，建議先與師傅溝通
+        </div>
       </div>
       <!--顏色展示 -->
-      <div class="max-w-2xl">
-        <colorSwiperPages :colorList="colorSwiper"></colorSwiperPages>
+      <div class="w-full">
+        <colorSwiperPages
+          :specialColor="specialColor"
+          :basicColor="basicColor"
+        ></colorSwiperPages>
       </div>
-      <div class="max-w-2xl my-20">
-        <testColor></testColor>
-      </div>
+      <!-- 價目及尺寸表 -->
+      <!-- banner -->
     </section>
   </div>
 </template>
@@ -188,8 +193,7 @@ import gsap from "gsap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import cubeSwiperPages from "@/components/swiper/cubeSwiper.vue";
-import colorSwiperPages from "@/components/swiper/colorSwiper.vue";
-import testColor from "@/components/swiper/testColor.vue";
+import colorSwiperPages from "@/components/swiper/colorChunk.vue";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);
@@ -211,10 +215,7 @@ const cubeSwiperPhoto = [
   require("@/assets/輪子/方塊輪播/金色.jpg"),
 ];
 
-const colorSwiper = [
-  { color: "rgba(0, 0, 0)", colorName: "黑色" },
-  { color: "rgba(139, 58, 58)", colorName: "棗紅色" },
-  { color: "rgba(0, 0, 128)", colorName: "寶藍色" },
+const specialColor = [
   { color: "rgba(255, 192, 203)", colorName: "淺紅色" },
   { color: "rgba(255, 201, 153)", colorName: "桃紅色" },
   { color: "rgba(128, 0, 128)", colorName: "紫色" },
@@ -235,6 +236,12 @@ const colorSwiper = [
   { color: "rgba(192, 192, 192)", colorName: "灰色" },
 ];
 
+const basicColor = [
+  { color: "rgba(0, 0, 0)", colorName: "黑色" },
+  { color: "rgba(139, 58, 58)", colorName: "棗紅色" },
+  { color: "rgba(0, 0, 128)", colorName: "寶藍色" },
+];
+
 const scrollToDetail = () => {
   const element = document.querySelector(".flex.justify-between.relative");
   if (element) {
@@ -251,7 +258,7 @@ const topPhoto = () => {
   AOS.init();
   gsap.to(".title__photo", {
     x: "0.2rem", // 圖片寬度 20rem 的一半加上抖動範圍
-    duration: 0.5,
+    duration: 1,
     onComplete: () => {
       // 第一個動畫結束後執行
       gsap.to(".title__photo", {
