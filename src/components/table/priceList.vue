@@ -10,6 +10,11 @@
     @is-finished="table.isLoading = false"
   >
   </table-lite>
+  <div class="mx-auto max-w-2xl text-center my-4">
+    <div class="my-2 text-2xl font-medium text-white sm:text-2xl">
+      🚫不可裝專利轉座
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -59,30 +64,30 @@ const table = reactive({
       aluminumGrip: 1950,
       pillGrip: "X",
       special: "X",
-      cardDream: 2750 + "不可",
+      cardDream: 2750 + "🚫",
       remark: "可上8號卡夢200米",
     },
     {
       cm: 11 + "公分淺杯",
       aluminumGrip: 2050,
       pillGrip: 2550,
-      special: 2550,
-      cardDream: 2750,
+      special: 2750 + "🚫",
+      cardDream: 2850,
       remark: "可上10號卡夢200米",
     },
     {
       cm: 12 + "公分淺杯",
       aluminumGrip: 2250,
       pillGrip: 2750,
-      special: 2750,
-      cardDream: 3050 + "不可",
+      special: 2950 + "🚫",
+      cardDream: 3050 + "🚫",
       remark: "可上12號卡夢200米",
     },
     {
       cm: 12 + "公分深杯",
       aluminumGrip: 2500,
       pillGrip: 3000,
-      special: 3000,
+      special: "X",
       cardDream: "X",
       remark: "可上14號卡夢200米",
     },
@@ -97,10 +102,22 @@ const table = reactive({
 
 <style>
 .vtl {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
 }
 .color-red {
   color: red !important;
+}
+@media screen and (max-width: 768px) {
+  .vtl {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 375px) {
+  .vtl {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 </style>

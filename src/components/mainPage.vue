@@ -62,7 +62,7 @@
             <span
               v-if="showText_Base"
               class="absolute bottom-16 text-white inline-block bg-gray-600 px-4 py-1 text-base font-semibold rounded-md whitespace-nowrap"
-              ><div class="">底座</div></span
+              ><div class="">轉座</div></span
             >
           </div>
 
@@ -97,7 +97,7 @@
       </div>
       <!-- 標題圖片說明文字文字 -->
       <div class="mx-auto max-w-2xl text-center mt-16 mb-40">
-        <div class="my-6 text-2xl font-medium text-white sm:text-4xl">
+        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
           🔥🔥台灣在地純手工鋁製前打輪🔥🔥
         </div>
         <div class="my-2 text-xl font-medium text-white sm:text-xl">
@@ -152,7 +152,7 @@
       </div>
       <!-- 詳細圖說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-40">
-        <div class="my-6 text-2xl font-medium text-white sm:text-2xl">
+        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
           🔥🔥前打輪細節圖片(可點擊放大)🔥🔥
         </div>
         <div class="my-2 text-xl font-medium text-white sm:text-xl">
@@ -165,7 +165,7 @@
       </div>
       <!-- 立方體展示說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-4">
-        <div class="my-6 text-2xl font-medium text-white sm:text-2xl">
+        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
           🔥🔥顏色展示🔥🔥
         </div>
         <div class="my-2 text-xl font-medium text-white sm:text-xl">
@@ -182,9 +182,31 @@
           :basicColor="basicColor"
         ></colorSwiperPages>
       </div>
+      <!-- 價目及尺寸表說明文字 -->
+      <div class="mx-auto max-w-2xl text-center mb-4">
+        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
+          🔥🔥價目及尺寸表🔥🔥
+        </div>
+        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+          可加價$700，加購專利轉座(360度旋轉)
+        </div>
+        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+          特式卡夢：中魚時，手把距離較省力！
+        </div>
+      </div>
       <!-- 價目及尺寸表 -->
       <div class="w-full mb-40">
         <priceList></priceList>
+      </div>
+      <!-- 所有照片說明文字 -->
+      <div class="mx-auto max-w-2xl text-center mb-4">
+        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
+          🔥🔥產品展示🔥🔥
+        </div>
+      </div>
+      <!-- 所有照片 -->
+      <div class="w-full mb-40 flex flex-col">
+        <allPhoto :allPhotoList="allPhotoList"></allPhoto>
       </div>
       <!-- banner -->
     </section>
@@ -198,6 +220,7 @@ import "aos/dist/aos.css";
 import cubeSwiperPages from "@/components/colorBlock/cubeSwiper.vue";
 import colorSwiperPages from "@/components/colorBlock/colorChunk.vue";
 import priceList from "@/components/table/priceList.vue";
+import allPhoto from "@/components/allPhoto/allPhoto.vue";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);
@@ -245,6 +268,17 @@ const basicColor = [
   { color: "rgba(139, 58, 58)", colorName: "棗紅色" },
   { color: "rgba(0, 0, 128)", colorName: "寶藍色" },
 ];
+// 照片集 放棄顯示文字 樣式很怪
+const allPhotoList = [
+  { pic: require("@/assets/輪子/show/灰色_專利手把.jpg"), msg: "專利手把" },
+  { pic: require("@/assets/輪子/show/灰色_綁線.jpg"), msg: "專利手把" },
+  { pic: require("@/assets/輪子/show/紅色_一般手把.jpg"), msg: "專利手把" },
+  { pic: require("@/assets/輪子/show/紅色_正面.jpg"), msg: "專利手把" },
+  { pic: require("@/assets/輪子/show/藍色_專利手把.jpg"), msg: "專利手把" },
+  { pic: require("@/assets/輪子/show/金色_正面.jpg"), msg: "專利手把" },
+  { pic: require("@/assets/輪子/show/專利轉座.jpg"), msg: "專利手把" },
+  { pic: require("@/assets/輪子/show/專利轉座2.jpg"), msg: "專利手把" },
+];
 
 const scrollToDetail = () => {
   const element = document.querySelector(".flex.justify-between.relative");
@@ -281,6 +315,7 @@ const topPhoto = () => {
 };
 </script>
 <style scoped>
+/* 漸層背景 */
 .background {
   background: #131313; /* 回退色 */
   background: -webkit-linear-gradient(
@@ -299,22 +334,5 @@ const topPhoto = () => {
     #1f1f1f,
     #131313
   );
-}
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
 }
 </style>
