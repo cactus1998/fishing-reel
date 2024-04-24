@@ -109,46 +109,7 @@
       </div>
       <!-- 詳細圖 -->
       <div class="detail__photo text-white mt-16 w-full">
-        <div class="flex justify-between relative">
-          <el-image
-            class="w-full h-96 px-4 py-4 object-contain"
-            :src="grayList01[0]"
-            :preview-src-list="grayList01"
-            :initial-index="0"
-            lazy
-            data-aos="zoom-in-right"
-            data-aos-duration="1500"
-          />
-          <el-image
-            class="w-full h-96 px-4 py-4"
-            :src="grayList01[1]"
-            :preview-src-list="grayList01"
-            :initial-index="1"
-            lazy
-            data-aos="zoom-in-left"
-            data-aos-duration="1500"
-          />
-        </div>
-        <div class="flex justify-between">
-          <el-image
-            class="w-full h-96 px-4 py-4"
-            :src="grayList01[2]"
-            :preview-src-list="grayList01"
-            :initial-index="2"
-            lazy
-            data-aos="zoom-in-right"
-            data-aos-duration="1500"
-          />
-          <el-image
-            class="w-full h-96 px-4 py-4 object-contain"
-            :src="grayList01[3]"
-            :preview-src-list="grayList01"
-            :initial-index="3"
-            lazy
-            data-aos="zoom-in-left"
-            data-aos-duration="1500"
-          />
-        </div>
+        <detailPhoto :grayList="grayList"></detailPhoto>
       </div>
       <!-- 詳細圖說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-40">
@@ -208,8 +169,13 @@
       <div class="w-full mb-40 flex flex-col">
         <allPhoto :allPhotoList="allPhotoList"></allPhoto>
       </div>
-      <!-- banner -->
+      <!-- 賣場連結 -->
+      <div class="mx-auto text-center mb-40">
+        <shopLink :gotoFB="gotoFB" :gotoShopee="gotoShopee"></shopLink>
+      </div>
     </section>
+    <!-- footer -->
+    <footerBlock :gotoFB="gotoFB" :gotoShopee="gotoShopee"></footerBlock>
   </div>
 </template>
 <script setup>
@@ -217,17 +183,19 @@ import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import detailPhoto from "@/components/allPhoto/detailPhoto.vue";
 import cubeSwiperPages from "@/components/colorBlock/cubeSwiper.vue";
 import colorSwiperPages from "@/components/colorBlock/colorChunk.vue";
 import priceList from "@/components/table/priceList.vue";
 import allPhoto from "@/components/allPhoto/allPhoto.vue";
+import shopLink from "@/components/shopLink/shopLink.vue";
+import footerBlock from "@/components/footerBlock/footerBlock.vue";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);
 const showText_skeleton = ref(false);
 
-// 灰色物輪物品照片
-const grayList01 = [
+const grayList = [
   require("@/assets/輪子/灰色/灰色_把手01.jpg"),
   require("@/assets/輪子/灰色/灰色_底座01.jpg"),
   require("@/assets/輪子/灰色/灰色_側面01.jpg"),
@@ -280,6 +248,10 @@ const allPhotoList = [
   { pic: require("@/assets/輪子/show/專利轉座2.jpg"), msg: "專利手把" },
 ];
 
+onMounted(() => {
+  topPhoto();
+});
+
 const scrollToDetail = () => {
   const element = document.querySelector(".flex.justify-between.relative");
   if (element) {
@@ -287,9 +259,15 @@ const scrollToDetail = () => {
   }
 };
 
-onMounted(() => {
-  topPhoto();
-});
+const gotoFB = () => {
+  window.location.href =
+    "https://www.facebook.com/p/%E6%A8%82%E5%92%96%E5%A4%A7%E7%89%A9%E8%BC%AA-%E5%89%8D%E6%89%93%E8%BC%AA%E5%B0%88%E8%B3%A3-100057736566821/?paipv=0&eav=AfZNmTkk1RANAAMz2q9BU9nvITP3hUrZ5r7_mS2CXaVBq9W6iAgobArv8l_TJ8QDBN4&_rdr";
+};
+
+const gotoShopee = () => {
+  window.location.href =
+    "https://shopee.tw/jinnana55123?categoryId=100637&entryPoint=ShopByPDP&itemId=7390264223&upstream=search";
+};
 
 // 首頁圖片動畫
 const topPhoto = () => {

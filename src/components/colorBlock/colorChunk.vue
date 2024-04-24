@@ -55,7 +55,7 @@ const props = defineProps({
   text-shadow: rgb(0, 0, 0) 1.5px 1.5px 1.5px;
 }
 .div_main_shadow {
-  color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 40px;
   text-shadow: rgb(3, 3, 3) 3px 3px 3px;
 }
