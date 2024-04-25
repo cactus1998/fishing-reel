@@ -5,17 +5,17 @@
     >
       <!-- 標題文字 -->
       <div class="mx-auto max-w-2xl text-center mt-10">
-        <div class="mt-2 text-lg font-medium text-white sm:text-lg">
+        <div class="mt-2 text-base font-medium text-white md:text-lg">
           Leka big wheel
         </div>
         <div
-          class="mt-2 text-7xl font-black tracking-tight text-white sm:text-7xl"
+          class="mt-2 text-5xl md:text-5xl lg:text-7xl font-black text-nowrap tracking-tight text-white"
         >
           <span class="inline-block align-top">
             <img
               src="@/assets/logo.png"
               alt=""
-              class="h-20 w-20 inline-block mr-2 align-top"
+              class="h-12 w-12 md:h-12 md:w-12 lg:h-20 lg:w-20 inline-block mr-2 align-top"
             />
           </span>
           樂咖大物輪
@@ -29,7 +29,7 @@
         <img
           src="@/assets/輪子/去背/灰色_正面_去被.png"
           alt=""
-          class="mainPhoto max-h-96 max-w-96"
+          class="mainPhoto max-h-80 max-w-80 md:max-w-96 md:max-h-96"
         />
         <button
           class="absolute top-0 right-16"
@@ -53,7 +53,7 @@
           />
         </button>
         <button
-          class="absolute top-64 right-0"
+          class="absolute top-56 md:top-64 right-0"
           @click="scrollToDetail"
           @mouseover="showText_Base = true"
           @mouseleave="showText_Base = false"
@@ -97,42 +97,45 @@
       </div>
       <!-- 標題圖片說明文字文字 -->
       <div class="mx-auto max-w-2xl text-center mt-16 mb-40">
-        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
-          🔥🔥台灣在地純手工鋁製前打輪🔥🔥
+        <div
+          class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
+        >
+          🔥台灣在地純手工鋁製前打輪🔥
         </div>
-        <div class="my-2 text-xl font-medium text-white sm:text-xl">
-          對於釣魚愛好者而言，每一次的垂釣都是一場挑戰，一次尋找極致的體驗
-        </div>
-        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+        <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
           個性化釣魚捲線器不僅能夠提供卓越的性能，更能夠與您的個人風格完美融合，為您帶來一種獨一無二的體驗
         </div>
       </div>
       <!-- 詳細圖 -->
-      <div class="detail__photo text-white mt-16 w-full">
+      <div class="detail__photo text-white w-full">
         <detailPhoto :grayList="grayList"></detailPhoto>
       </div>
       <!-- 詳細圖說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-40">
-        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
-          🔥🔥前打輪細節圖片(可點擊放大)🔥🔥
+        <div
+          class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
+        >
+          🔥前打輪細節(可點擊放大)🔥
         </div>
-        <div class="my-2 text-xl font-medium text-white sm:text-xl">
-          我們的釣魚捲線器採用精湛的手工鋁製前打輪，每一個細節都經過精心雕琢，確保您在垂釣過程中擁有頂級的操作感受。無論是釣魚的過程還是成果，我們都致力於讓您的每一次釣魚體驗都達到最高水準。
+        <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
+          每一個細節都經過精心雕琢，致力於讓您的每一次釣魚體驗都達到最高水準。
         </div>
       </div>
       <!-- 立方體展示照片 -->
       <div class="max-w-2xl">
         <cubeSwiperPages :photoList="cubeSwiperPhoto"></cubeSwiperPages>
       </div>
-      <!-- 立方體展示說明文字 -->
+      <!-- 顏色展示說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-4">
-        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
-          🔥🔥顏色展示🔥🔥
+        <div
+          class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
+        >
+          🔥顏色展示🔥
         </div>
-        <div class="my-2 text-xl font-medium text-white sm:text-xl">
-          特殊色皆為訂製色，顧名思義是客製化的顏色，亦不能退換貨🚫
+        <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
+          特殊色皆為訂製色，顧名思義是客製化的顏色，亦不能退換貨
         </div>
-        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+        <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
           且因訂製關係，製作等待時間較長，建議先與師傅溝通
         </div>
       </div>
@@ -145,13 +148,15 @@
       </div>
       <!-- 價目及尺寸表說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-4">
-        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
-          🔥🔥價目及尺寸表🔥🔥
+        <div
+          class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
+        >
+          🔥價目及尺寸表🔥
         </div>
-        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+        <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
           可加價$700，加購專利轉座(360度旋轉)
         </div>
-        <div class="my-2 text-xl font-medium text-white sm:text-xl">
+        <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
           特式卡夢：中魚時，手把距離較省力！
         </div>
       </div>
@@ -160,9 +165,11 @@
         <priceList></priceList>
       </div>
       <!-- 所有照片說明文字 -->
-      <div class="mx-auto max-w-2xl text-center mb-4">
-        <div class="my-6 text-4xl font-medium text-white sm:text-4xl">
-          🔥🔥產品展示🔥🔥
+      <div class="mx-auto max-w-xl md:max-w-2xl text-center mb-4">
+        <div
+          class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
+        >
+          🔥成品展示🔥
         </div>
       </div>
       <!-- 所有照片 -->

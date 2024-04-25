@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <!-- 使用tailwind會失效 -->
     <div v-for="(image, index) in props.allPhotoList" :key="index" class="pic">
       <img

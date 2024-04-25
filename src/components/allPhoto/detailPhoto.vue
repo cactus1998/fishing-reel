@@ -6,7 +6,7 @@
         :key="index"
       >
         <el-image
-          class="w-full h-96 px-4 py-4"
+          class="w-full h-40 md:h-80 lg:h-96 px-1 py-1 md:px-2 md:py-2 lg:px-4 lg:py-4"
           :class="{ 'object-contain': index % 2 !== 0 }"
           :src="image"
           :preview-src-list="props.grayList"
@@ -23,7 +23,7 @@
         :key="index"
       >
         <el-image
-          class="w-full h-96 px-4 py-4"
+          class="w-full h-40 md:h-80 lg:h-96 px-1 py-1 md:px-2 md:py-2 lg:px-4 lg:py-4"
           :class="{ 'object-contain': index % 2 === 0 }"
           :src="image"
           :preview-src-list="props.grayList"

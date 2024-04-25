@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-80 sm:w-96 md:w-full lg:w-full">
     <swiper
       :effect="'cube'"
       :grabCursor="true"

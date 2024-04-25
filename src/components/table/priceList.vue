@@ -1,5 +1,6 @@
 <template>
   <table-lite
+    class="table-lite"
     :is-static-mode="true"
     :is-loading="table.isLoading"
     :columns="table.columns"
@@ -11,8 +12,8 @@
   >
   </table-lite>
   <div class="mx-auto max-w-2xl text-center my-4">
-    <div class="my-2 text-2xl font-medium text-white sm:text-2xl">
-      🚫不可裝專利轉座
+    <div class="my-2 text-xl md:text-2xl lg:text-2xl font-medium text-white">
+      🚫表示該尺吋不可裝專利轉座
     </div>
   </div>
 </template>
@@ -55,7 +56,7 @@ const table = reactive({
     {
       label: "備註",
       field: "remark",
-      width: "20%",
+      width: "40%",
     },
   ],
   rows: [
@@ -104,6 +105,9 @@ const table = reactive({
 .vtl {
   font-size: 22px;
   font-weight: 600;
+}
+.table-lite {
+  white-space: nowrap;
 }
 .color-red {
   color: red !important;

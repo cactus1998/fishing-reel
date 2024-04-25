@@ -16,7 +16,7 @@
               >
             </a>
           </div>
-          <div class="grid grid-cols-2 gap-16 sm:gap-12 sm:grid-cols-2">
+          <div class="grid grid-cols-2 gap-16 md:gap-12 md:grid-cols-2">
             <div>
               <h2 class="mb-6 text-gray-200 text-lg font-semibold uppercase">
                 聯絡我們
@@ -55,12 +55,12 @@
           </div>
         </div>
         <!-- footer -->
-        <hr class="my-6 border-gray-500 sm:mx-aut lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-base text-gray-400 sm:text-center"
+        <hr class="my-6 border-gray-500 md:mx-aut lg:my-8" />
+        <div class="md:flex md:items-center md:justify-between">
+          <span class="text-base text-gray-400 md:text-center"
             >© 2024 維娜平片設計 版權所有。網頁設計 by cactus1998
           </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0 gap-10">
+          <div class="flex mt-4 md:justify-center md:mt-0 gap-10">
             <a @click="gotoFB()" class="text-gray-400 hover:text-gray-900">
               <svg
                 class="w-6 h-6"
