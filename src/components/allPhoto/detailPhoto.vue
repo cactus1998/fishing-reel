@@ -26,7 +26,7 @@
           class="w-full h-40 md:h-80 lg:h-96 px-1 py-1 md:px-2 md:py-2 lg:px-4 lg:py-4"
           :class="{ 'object-contain': index % 2 === 0 }"
           :src="image"
-          :preview-src-list="props.grayList"
+          :preview-src-list="props.grayList.slice(2, 4)"
           :initial-index="index"
           lazy
           :data-aos="index % 2 === 0 ? 'zoom-in-right' : 'zoom-in-left'"
