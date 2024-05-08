@@ -11,7 +11,6 @@
           :src="image"
           :preview-src-list="props.grayList"
           :initial-index="index"
-          lazy
           :data-aos="index % 2 === 0 ? 'zoom-in-right' : 'zoom-in-left'"
           data-aos-duration="1500"
         />
