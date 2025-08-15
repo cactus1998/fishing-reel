@@ -1,18 +1,15 @@
 <template>
   <div class="background max-w-screen">
-<<<<<<< HEAD
-    <div class="absolute top-4 right-4">
-      <LanguageSwitcher />
-    </div>
-=======
     <!-- loading -->
     <section class="fixed inset-0 overflow-hidden absolute">
       <loadingPage :isLoading="isLoading"></loadingPage>
     </section>
->>>>>>> origin/main
     <section
       class="title mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col items-center"
     >
+      <div class="absolute top-4 right-4">
+        <LanguageSwitcher />
+      </div>
       <div
         class="mx-auto flex max-w-2xl items-center justify-between mt-10 px-4"
       >
