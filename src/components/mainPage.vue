@@ -1,27 +1,27 @@
 <template>
   <div class="background max-w-screen">
+    <div class="absolute top-4 right-4">
+      <LanguageSwitcher />
+    </div>
     <section
       class="title mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col items-center"
     >
-      <!-- 標題文字 -->
-      <div class="mx-auto max-w-2xl text-center mt-10">
-        <div class="mt-2 text-base font-medium text-white md:text-lg">
-          Leka big wheel
-        </div>
-        <div
-          class="mt-2 text-5xl md:text-5xl lg:text-7xl font-black text-nowrap tracking-tight text-white"
-        >
-          <span class="inline-block align-top">
-            <img
-              src="@/assets/logo.png"
-              alt=""
-              class="h-12 w-12 md:h-12 md:w-12 lg:h-20 lg:w-20 inline-block mr-2 align-top"
-            />
+      <div
+        class="mx-auto flex max-w-2xl items-center justify-between mt-10 px-4"
+      >
+        <div class="flex items-center space-x-2">
+          <img
+            src="@/assets/logo.png"
+            alt=""
+            class="h-12 w-12 lg:h-20 lg:w-20"
+          />
+          <span
+            class="text-5xl lg:text-7xl font-black tracking-tight text-white whitespace-nowrap"
+          >
+            {{ $t("title") }}
           </span>
-          樂咖大物輪
         </div>
       </div>
-      <!-- 標題圖片 -->
       <div
         class="title__photo text-white mt-32"
         style="transform: translateX(-100vw)"
@@ -41,7 +41,7 @@
             <span
               v-if="showText_handle"
               class="absolute bottom-16 text-white inline-block bg-gray-600 px-4 py-1 text-base font-semibold rounded-md whitespace-nowrap"
-              ><div class="">把手</div></span
+              ><div class="">{{ $t("handle") }}</div></span
             >
           </div>
 
@@ -62,7 +62,7 @@
             <span
               v-if="showText_Base"
               class="absolute bottom-16 text-white inline-block bg-gray-600 px-4 py-1 text-base font-semibold rounded-md whitespace-nowrap"
-              ><div class="">轉座</div></span
+              ><div class="">{{ $t("swivel_base") }}</div></span
             >
           </div>
 
@@ -83,7 +83,7 @@
             <span
               v-if="showText_skeleton"
               class="absolute bottom-16 text-white inline-block bg-gray-600 px-4 py-1 text-base font-semibold rounded-md whitespace-nowrap"
-              ><div class="">鋁框</div></span
+              ><div class="">{{ $t("aluminum_frame") }}</div></span
             >
           </div>
 
@@ -95,93 +95,81 @@
           />
         </button>
       </div>
-      <!-- 標題圖片說明文字文字 -->
       <div class="mx-auto max-w-2xl text-center mt-16 mb-40">
         <div
           class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
         >
-          🔥台灣在地純手工鋁製前打輪🔥
+          🔥{{ $t("slogan") }}🔥
         </div>
         <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
-          個性化釣魚捲線器不僅能夠提供卓越的性能，更能夠與您的個人風格完美融合，為您帶來一種獨一無二的體驗
+          {{ $t("description") }}
         </div>
       </div>
-      <!-- 詳細圖 -->
       <div class="detail__photo text-white w-full">
         <detailPhoto :grayList="grayList"></detailPhoto>
       </div>
-      <!-- 詳細圖說明文字 -->
-      <div class="mx-auto max-w-2xl text-center mb-40">
+      <div class="mx-auto max-w-3xl text-center mb-40">
         <div
           class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
         >
-          🔥前打輪細節(可點擊放大)🔥
+          🔥{{ $t("detail_title") }}🔥
         </div>
         <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
-          每一個細節都經過精心雕琢，致力於讓您的每一次釣魚體驗都達到最高水準。
+          {{ $t("detail_description") }}
         </div>
       </div>
-      <!-- 立方體展示照片 -->
       <div class="max-w-2xl">
         <cubeSwiperPages :photoList="cubeSwiperPhoto"></cubeSwiperPages>
       </div>
-      <!-- 顏色展示說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-4">
         <div
           class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
         >
-          🔥顏色展示🔥
+          🔥{{ $t("color_display_title") }}🔥
         </div>
         <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
-          特殊色皆為訂製色，顧名思義是客製化的顏色，亦不能退換貨
+          {{ $t("color_description_1") }}
         </div>
         <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
-          且因訂製關係，製作等待時間較長，建議先與師傅溝通
+          {{ $t("color_description_2") }}
         </div>
       </div>
-      <!--顏色展示 -->
       <div class="w-full mb-40">
         <colorSwiperPages
           :specialColor="specialColor"
           :basicColor="basicColor"
         ></colorSwiperPages>
       </div>
-      <!-- 價目及尺寸表說明文字 -->
       <div class="mx-auto max-w-2xl text-center mb-4">
         <div
           class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
         >
-          🔥價目及尺寸表🔥
+          🔥{{ $t("price_and_size_title") }}🔥
         </div>
         <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
-          可加價$700，加購專利轉座(360度旋轉)
+          {{ $t("price_and_size_description_1") }}
         </div>
         <div class="my-2 text-md md:text-xl lg:text-2xl font-medium text-white">
-          特式卡夢：中魚時，手把距離較省力！
+          {{ $t("price_and_size_description_2") }}
         </div>
       </div>
-      <!-- 價目及尺寸表 -->
       <div class="w-full mb-40">
         <priceList></priceList>
       </div>
-      <!-- 所有照片說明文字 -->
       <div class="mx-auto max-w-xl md:max-w-2xl text-center mb-4">
         <div
           class="my-6 text-2xl md:text-3xl lg:text-4xl font-medium text-nowrap text-white"
         >
-          🔥成品展示🔥
+          🔥{{ $t("finished_product_title") }}🔥
         </div>
       </div>
-      <!-- 所有照片 -->
       <div class="w-full mb-40 flex flex-col">
         <allPhoto :allPhotoList="allPhotoList"></allPhoto>
       </div>
-      <!-- 賣場連結 -->
       <div class="mx-auto text-center mb-40">
         <shopLink :gotoFB="gotoFB" :gotoShopee="gotoShopee"></shopLink>
       </div>
     </section>
-    <!-- footer -->
     <footerBlock :gotoFB="gotoFB" :gotoShopee="gotoShopee"></footerBlock>
   </div>
 </template>
@@ -197,6 +185,7 @@ import priceList from "@/components/table/priceList.vue";
 import allPhoto from "@/components/allPhoto/allPhoto.vue";
 import shopLink from "@/components/shopLink/shopLink.vue";
 import footerBlock from "@/components/footerBlock/footerBlock.vue";
+import LanguageSwitcher from "@/components/language/LanguageSwitcher.vue";
 
 const showText_handle = ref(false);
 const showText_Base = ref(false);
