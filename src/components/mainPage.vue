@@ -1,8 +1,15 @@
 <template>
   <div class="background max-w-screen">
+<<<<<<< HEAD
     <div class="absolute top-4 right-4">
       <LanguageSwitcher />
     </div>
+=======
+    <!-- loading -->
+    <section class="fixed inset-0 overflow-hidden absolute">
+      <loadingPage :isLoading="isLoading"></loadingPage>
+    </section>
+>>>>>>> origin/main
     <section
       class="title mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col items-center"
     >
@@ -178,6 +185,7 @@ import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import loadingPage from "@/components/loading/loadingPage.vue";
 import detailPhoto from "@/components/allPhoto/detailPhoto.vue";
 import cubeSwiperPages from "@/components/colorBlock/cubeSwiper.vue";
 import colorSwiperPages from "@/components/colorBlock/colorChunk.vue";
@@ -187,6 +195,7 @@ import shopLink from "@/components/shopLink/shopLink.vue";
 import footerBlock from "@/components/footerBlock/footerBlock.vue";
 import LanguageSwitcher from "@/components/language/LanguageSwitcher.vue";
 
+const isLoading = ref(true);
 const showText_handle = ref(false);
 const showText_Base = ref(false);
 const showText_skeleton = ref(false);
@@ -245,7 +254,10 @@ const allPhotoList = [
 ];
 
 onMounted(() => {
-  topPhoto();
+  setTimeout(() => {
+    isLoading.value = false;
+    topPhoto();
+  }, 1500);
 });
 
 const scrollToDetail = () => {
