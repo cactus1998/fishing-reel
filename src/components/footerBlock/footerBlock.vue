@@ -12,53 +12,52 @@
               />
               <span
                 class="text-gray-400 self-center text-xl font-semibold whitespace-nowrap hover:cursor-pointer"
-                >樂咖大物輪-前打輪專賣</span
+                >{{ $t("footer.logo_text") }}</span
               >
             </a>
           </div>
           <div class="grid grid-cols-2 gap-16 md:gap-12 md:grid-cols-2">
             <div>
               <h2 class="mb-6 text-gray-200 text-lg font-semibold uppercase">
-                聯絡我們
+                {{ $t("footer.contact_us") }}
               </h2>
               <ul class="text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
                     href="https://shopee.tw/jinnana55123?categoryId=100637&entryPoint=ShopByPDP&itemId=7390264223&upstream=search"
                     class="hover:underline hover:font-semibold hover:text-gray-900"
-                    >維娜平片設計</a
+                    >{{ $t("footer.designer") }}</a
                   >
                 </li>
               </ul>
             </div>
             <div>
               <h2 class="mb-6 text-gray-200 text-lg font-semibold uppercase">
-                關注我們
+                {{ $t("footer.follow_us") }}
               </h2>
               <ul class="text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
                     @click="gotoShopee()"
                     class="hover:underline hover:font-semibold hover:text-gray-900"
-                    >FB粉絲專頁</a
+                    >{{ $t("footer.facebook_page") }}</a
                   >
                 </li>
                 <li>
                   <a
                     @click="gotoFB()"
                     class="hover:underline hover:font-semibold hover:text-gray-900"
-                    >蝦皮賣場</a
+                    >{{ $t("footer.shopee_store") }}</a
                   >
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- footer -->
         <hr class="my-6 border-gray-500 md:mx-aut lg:my-8" />
         <div class="md:flex md:items-center md:justify-between">
-          <span class="text-base text-gray-400 md:text-center"
-            >有任何問題請聯繫 s770880qq@gmail.com
+          <span class="text-base text-gray-400 md:text-center">
+            {{ $t("footer.contact_email") }}
           </span>
           <div class="flex mt-4 md:justify-center md:mt-0 gap-10">
             <a @click="gotoFB()" class="text-gray-400 hover:text-gray-900">

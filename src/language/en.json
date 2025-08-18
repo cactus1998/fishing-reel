@@ -10,8 +10,67 @@
   "color_description_1": "Special colors are custom-made; they are personalized colors and therefore cannot be returned or exchanged.",
   "color_description_2": "Due to the custom nature of these orders, production time is longer. It is recommended to communicate with the craftsman beforehand.",
   "price_and_size_title": "Price and size chart",
-  "price_and_size_description_1": "Add $700 for a patented swivel base (360-degree rotation).",
+  "price_and_size_description_1": "Add $700NT for a patented swivel base (360-degree rotation).",
   "price_and_size_description_2": "Special carbon fiber: The handle is positioned for less effort when a fish is on the line!",
   "finished_product_title": "Finished product display",
-  "store_link": "Store link"
+  "store_link": "Store link",
+  "fb": "Facebook",
+  "shopee": "Shopee link",
+
+  "colors": {
+    "light_red": "Light Red",
+    "peach_red": "Peach Red",
+    "purple": "Purple",
+    "dark_green": "Dark Green",
+    "green": "Green",
+    "light_green": "Light Green",
+    "orange": "Orange",
+    "golden_yellow": "Golden Yellow",
+    "k_gold": "K Gold",
+    "bronze": "Bronze",
+    "coffee": "Coffee",
+    "dark_titanium": "Dark Titanium",
+    "navy": "Navy",
+    "light_blue": "Light Blue",
+    "indigo": "Indigo",
+    "titanium": "Titanium",
+    "titanium_gray": "Titanium Gray",
+    "gray": "Gray",
+    "black": "Black",
+    "jujube_red": "Jujube Red",
+    "royal_blue": "Royal Blue"
+  },
+
+  "price_table": {
+    "warn":" Indicates that this size cannot accommodate the patented swivel base.",
+    "columns": {
+      "size": "Size",
+      "aluminum_grip": "Aluminum Grip",
+      "pill_grip_style": "Pill Grip Style",
+      "special_edition": "Special Edition",
+      "special_carbon": "Special Carbon",
+      "notes": "Notes"
+    },
+    "rows": {
+      "cm_shallow_cup": "cm Shallow Cup",
+      "cm_deep_cup": "cm Deep Cup",
+      "note_8": "Can hold 200m of #8 carbon fiber line",
+      "note_10": "Can hold 200m of #10 carbon fiber line",
+      "note_12": "Can hold 200m of #12 carbon fiber line",
+      "note_14": "Can hold 200m of #14 carbon fiber line"
+    }
+  },
+
+  "footer": {
+    "logo_text": "Leka Big Wheel - Front-Brake Reel Specialist",
+    "contact_us": "Contact Us",
+    "designer": "Vina Flat Design",
+    "follow_us": "Follow Us",
+    "facebook_page": "FB",
+    "shopee_store": "Shopee",
+    "contact_email": "For any questions, please contact s770880qq@gmail.com"
+  },
+
+  "specialColor": "Special Color",
+  "basicColor": "Basic Color"
 }

@@ -178,7 +178,7 @@
   </div>
 </template>
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, computed } from "vue";
 import gsap from "gsap";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -191,7 +191,9 @@ import allPhoto from "@/components/allPhoto/allPhoto.vue";
 import shopLink from "@/components/shopLink/shopLink.vue";
 import footerBlock from "@/components/footerBlock/footerBlock.vue";
 import LanguageSwitcher from "@/components/language/LanguageSwitcher.vue";
+import { useI18n } from "vue-i18n";
 
+const { t } = useI18n(); // 取得 $t 函數
 const isLoading = ref(true);
 const showText_handle = ref(false);
 const showText_Base = ref(false);
@@ -212,32 +214,34 @@ const cubeSwiperPhoto = [
   require("@/assets/輪子/方塊輪播/金色.jpg"),
 ];
 
-const specialColor = [
-  { color: "rgba(255, 192, 203)", colorName: "淺紅色" },
-  { color: "rgba(255, 201, 153)", colorName: "桃紅色" },
-  { color: "rgba(128, 0, 128)", colorName: "紫色" },
-  { color: "rgba(0, 128, 0)", colorName: "墨綠色" },
-  { color: "rgba(0, 255, 0)", colorName: "綠色" },
-  { color: "rgba(128, 255, 128)", colorName: "淺綠色" },
-  { color: "rgba(255, 165, 0)", colorName: "桔色" },
-  { color: "rgba(255, 255, 0)", colorName: "金黃色" },
-  { color: "rgba(230, 190, 0)", colorName: "K金色" },
-  { color: "rgba(192, 64, 0)", colorName: "青銅色" },
-  { color: "rgba(64, 64, 64)", colorName: "咖啡色" },
-  { color: "rgba(139, 99, 33)", colorName: "深鈦色" },
-  { color: "rgba(0, 0, 128)", colorName: "海軍色" },
-  { color: "rgba(0, 128, 255)", colorName: "水藍色" },
-  { color: "rgba(75, 0, 130)", colorName: "靛紫色" },
-  { color: "rgba(168, 168, 168)", colorName: "鈦色" },
-  { color: "rgba(128, 128, 128)", colorName: "鈦灰色" },
-  { color: "rgba(192, 192, 192)", colorName: "灰色" },
-];
+// 使用computed解決不會刷新的問題
+const specialColor = computed(() => [
+  { color: "rgba(255, 192, 203)", colorName: t("colors.light_red") },
+  { color: "rgba(255, 201, 153)", colorName: t("colors.peach_red") },
+  { color: "rgba(128, 0, 128)", colorName: t("colors.purple") },
+  { color: "rgba(0, 128, 0)", colorName: t("colors.dark_green") },
+  { color: "rgba(0, 255, 0)", colorName: t("colors.green") },
+  { color: "rgba(128, 255, 128)", colorName: t("colors.light_green") },
+  { color: "rgba(255, 165, 0)", colorName: t("colors.orange") },
+  { color: "rgba(255, 255, 0)", colorName: t("colors.golden_yellow") },
+  { color: "rgba(230, 190, 0)", colorName: t("colors.k_gold") },
+  { color: "rgba(192, 64, 0)", colorName: t("colors.bronze") },
+  { color: "rgba(64, 64, 64)", colorName: t("colors.coffee") },
+  { color: "rgba(139, 99, 33)", colorName: t("colors.dark_titanium") },
+  { color: "rgba(0, 0, 128)", colorName: t("colors.navy") },
+  { color: "rgba(0, 128, 255)", colorName: t("colors.light_blue") },
+  { color: "rgba(75, 0, 130)", colorName: t("colors.indigo") },
+  { color: "rgba(168, 168, 168)", colorName: t("colors.titanium") },
+  { color: "rgba(128, 128, 128)", colorName: t("colors.titanium_gray") },
+  { color: "rgba(192, 192, 192)", colorName: t("colors.gray") },
+]);
 
-const basicColor = [
-  { color: "rgba(0, 0, 0)", colorName: "黑色" },
-  { color: "rgba(139, 58, 58)", colorName: "棗紅色" },
-  { color: "rgba(0, 0, 128)", colorName: "寶藍色" },
-];
+const basicColor = computed(() => [
+  { color: "rgba(0, 0, 0)", colorName: t("colors.black") },
+  { color: "rgba(139, 58, 58)", colorName: t("colors.jujube_red") },
+  { color: "rgba(0, 0, 128)", colorName: t("colors.royal_blue") },
+]);
+
 // 照片集 放棄顯示文字 樣式很怪
 const allPhotoList = [
   { pic: require("@/assets/輪子/show/灰色_專利手把.jpg"), msg: "專利手把" },

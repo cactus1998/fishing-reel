@@ -10,8 +10,67 @@
   "color_description_1": "特殊色皆为订制色，顾名思义是客制化的颜色，亦不能退换货",
   "color_description_2": "且因订制关系，制作等待时间较长，建议先与师傅沟通",
   "price_and_size_title": "价目及尺寸表",
-  "price_and_size_description_1": "可加价$700，加购专利转座 (360度旋转)",
+  "price_and_size_description_1": "可加价$700NT，加购专利转座 (360度旋转)",
   "price_and_size_description_2": "特式卡梦：中鱼时，手把距离较省力！",
   "finished_product_title": "成品展示",
-  "store_link": "卖场链接"
+  "store_link": "卖场链接",
+  "fb": "脸书私讯下单",
+  "shopee": "虾皮卖场",
+
+  "colors": {
+    "light_red": "浅红色",
+    "peach_red": "桃红色",
+    "purple": "紫色",
+    "dark_green": "墨绿色",
+    "green": "绿色",
+    "light_green": "浅绿色",
+    "orange": "桔色",
+    "golden_yellow": "金黄色",
+    "k_gold": "K金色",
+    "bronze": "青铜色",
+    "coffee": "咖啡色",
+    "dark_titanium": "深钛色",
+    "navy": "海军色",
+    "light_blue": "水蓝色",
+    "indigo": "靛紫色",
+    "titanium": "钛色",
+    "titanium_gray": "钛灰色",
+    "gray": "灰色",
+    "black": "黑色",
+    "jujube_red": "枣红色",
+    "royal_blue": "宝蓝色"
+  },
+
+  "price_table": {
+    "warn": "表示该尺吋不可装专利转座",
+    "columns": {
+      "size": "尺寸",
+      "aluminum_grip": "铝握把",
+      "pill_grip_style": "握丸样式",
+      "special_edition": "特式版",
+      "special_carbon": "特式卡梦",
+      "notes": "备注"
+    },
+    "rows": {
+      "cm_shallow_cup": "公分浅杯",
+      "cm_deep_cup": "公分深杯",
+      "note_8": "可上8号卡梦200米",
+      "note_10": "可上10号卡梦200米",
+      "note_12": "可上12号卡梦200米",
+      "note_14": "可上14号卡梦200米"
+    }
+  },
+
+  "footer": {
+    "logo_text": "乐咖大物轮-前打轮专卖",
+    "contact_us": "联络我们",
+    "designer": "维娜平片设计",
+    "follow_us": "关注我们",
+    "facebook_page": "FB粉丝专页",
+    "shopee_store": "虾皮卖场",
+    "contact_email": "有任何问题请联系 s770880qq@gmail.com"
+  },
+
+  "specialColor": "特殊色",
+  "basicColor": "基本色"
 }

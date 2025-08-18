@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mt-6 mb-12 text-4xl font-medium text-white md:text-4xl">
-      🔥賣場連結🔥
+      🔥{{ $t("specialColor") }}🔥
     </div>
     <div class="my-4 text-xl font-medium text-white md:text-xl">
       <button
@@ -11,7 +11,7 @@
         <span
           class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
         >
-          臉書私訊下單
+          {{ $t("fb") }}
         </span>
       </button>
     </div>
@@ -23,7 +23,7 @@
         <span
           class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
         >
-          蝦皮賣場
+          {{ $t("shopee") }}
         </span>
       </button>
     </div>

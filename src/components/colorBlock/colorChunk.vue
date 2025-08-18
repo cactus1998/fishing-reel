@@ -3,7 +3,7 @@
   <div class="flex flex-row flex-wrap justify-center pb-10">
     <span
       class="w-full text-center text-white text-2xl md:text-3xl lg:text-4xl py-8"
-      >基本色</span
+      >{{ $t("basicColor") }}</span
     >
     <div class="flex flex-row flex-wrap justify-center gap-8">
       <div
@@ -16,7 +16,7 @@
       >
         <div class="w-full h-full flex items-center justify-center relative">
           <span
-            class="absolute top-20 md:top-24 lg:top-28 text-white text-md md:text-xl lg:text-2xl"
+            class="absolute top-20 md:top-24 lg:top-28 text-white text-md md:text-xl lg:text-xl text-nowrap"
             >{{ item.colorName }}</span
           >
         </div>
@@ -27,7 +27,7 @@
   <div class="flex flex-row flex-wrap justify-center pb-10">
     <span
       class="w-full text-center text-white text-2xl md:text-3xl lg:text-4xl py-4"
-      >特殊色</span
+      >{{ $t("specialColor") }}</span
     >
     <div class="flex flex-row flex-wrap justify-center gap-8">
       <div
@@ -40,7 +40,7 @@
       >
         <div class="w-full h-full flex items-center justify-center relative">
           <span
-            class="absolute top-20 md:top-24 lg:top-28 text-white text-md md:text-xl lg:text-2xl"
+            class="absolute top-20 md:top-24 lg:top-28 text-white text-md md:text-xl lg:text-xl text-nowrap"
             >{{ item.colorName }}</span
           >
         </div>
