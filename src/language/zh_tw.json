@@ -42,7 +42,7 @@
   },
 
   "price_table": {
-    "warn":"表示該尺吋不可裝專利轉座",
+    "warn": "表示該尺吋不可裝專利轉座",
     "columns": {
       "size": "尺吋",
       "aluminum_grip": "鋁握把",

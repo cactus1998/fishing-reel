@@ -42,7 +42,7 @@
   },
 
   "price_table": {
-    "warn":" Indicates that this size cannot accommodate the patented swivel base.",
+    "warn": " Indicates that this size cannot accommodate the patented swivel base.",
     "columns": {
       "size": "Size",
       "aluminum_grip": "Aluminum Grip",

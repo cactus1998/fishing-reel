@@ -7,11 +7,11 @@
     <section
       class="title mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col items-center"
     >
-      <div class="absolute top-4 right-4">
+      <div class="absolute top-1 right-1">
         <LanguageSwitcher />
       </div>
       <div
-        class="mx-auto flex max-w-2xl items-center justify-between mt-10 px-4"
+        class="mx-auto flex max-w-2xl items-center justify-between mt-16 px-4"
       >
         <div class="flex items-center space-x-2">
           <img

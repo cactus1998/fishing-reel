@@ -1,5 +1,5 @@
 <template>
-  <div class="language-switcher">
+  <div class="language-switcher w-[120px] md:w-[160px]">
     <el-select
       v-model="locale"
       placeholder="請選擇語言"
@@ -36,8 +36,4 @@ const handleLocaleChange = (newLocale) => {
 };
 </script>
 
-<style scoped>
-.language-switcher {
-  width: 150px; /* 根據你的設計調整寬度 */
-}
-</style>
+<style scoped></style>
