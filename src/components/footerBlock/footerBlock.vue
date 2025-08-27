@@ -57,7 +57,7 @@
         <hr class="my-6 border-gray-500 md:mx-aut lg:my-8" />
         <div class="md:flex md:items-center md:justify-between">
           <span class="text-base text-gray-400 md:text-center">
-            {{ $t("footer.contact_email") }}
+            {{ $t("footer.contact_email") }} s770880qq@gmail.com
           </span>
           <div class="flex mt-4 md:justify-center md:mt-0 gap-10">
             <a @click="gotoFB()" class="text-gray-400 hover:text-gray-900">

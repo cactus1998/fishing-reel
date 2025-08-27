@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mt-6 mb-12 text-4xl font-medium text-white md:text-4xl">
-      🔥{{ $t("specialColor") }}🔥
+      🔥{{ $t("store_link") }}🔥
     </div>
     <div class="my-4 text-xl font-medium text-white md:text-xl">
       <button
